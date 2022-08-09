@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@300&display=swap');
+
+body{
+	padding: 0 2%;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	position: sticky;
+	top: 0;
+	font-weight: bold;
+}
+nav .profile{
+	display: flex;
+	align-items: center;
+}
+
+nav .profile img{
+	width: 100px;
+	height: 100px;
+	border-radius:50% ;
+}
+nav .profile h1{
+	margin-left: 10px;
+	font-size: 15px;
+}
+nav ul{
+	display: flex;
+	list-style: none;
+}
+
+nav ul li{
+	margin-left: 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #fff;
+}
+nav ul li:hover{
+	border-bottom-color:#000;
+}
+
+.page-content{
+	margin: 4%;
+	max-width: 80%;
+	margin-left: 10%;
+}
+.page-content h1{
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 5vw;
+	text-align: center;
+
+}
+
+.page-content header{
+
+      margin-top: 5%;
+}
+
+.page-content header p{
+	line-height: 30px;
+	color: #818181;
+
+}
+.page-content header button{
+	background-color: inherit;
+	border: none;
+	outline: none;
+	padding: 0;
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+
+}
+.page-content header button:hover{
+	color: #ccc;
+	border-bottom-color: #000 ;
+
+}
+.presentation-image{
+	margin-top: 2%;
+	margin-left: 6%;
+
+} 
+.presentation-image img{
+	width:1050px;
+	height:500px ;
+	align-content: center;
+	margin-left: 50px;
+}
+.presentation-image img:hover {
+	filter: brightness(50%);
+}
+.projets-section{
+	margin-top: 6%;
+	margin-left: 10%;
+
+}
+ 
+ .projets-section h1{
+ 	font-family:'Oswald', 'sans-serif';
+ 	text-transform: uppercase;
+ 	font-size: 2vw;
+ }
+
+ .projets-section .projets{
+ 	display: flex;
+ 	flex-wrap: wrap;
+
+
+ }
+
+ .projets-section .projets .projet{
+ 	max-width: 195px;
+
+ }
+
+  .projets-section .projets .projet h4{
+ 	margin: 0;
+
+ }
+
+ .projets-section .projets .projet .description{
+ 	font-size: 10px;
+
+
+ }
+
+  .projets-section .projets .projet .dates{
+ 	font-size: 13px;
+ 	color: rgb(145, 145, 145);
+ 	
+
+ }
+
+footer{
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #000;
+	color: white;
+	padding: 10px;
+}
+footer h3{
+	font-family: 'Oswald', sans-serif;
+}
+
+footer.colonne a{
+     text-decoration: none;
+}
+
+footer .colonne p{
+	font-size: 12px;
+	color: #ccc;
+	cursor: pointer;
+}
+footer .colonne p:hover{
+	color: white;
+}
+
+@media screen and(max-width: 700px){
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		display: none;
+	}
+	.page-content header {
+		margin-top: 10px;
+		max-width: 100%;
+	}
+
+	.projets-section{
+		margin-top: 15%;
+	}
+	.projets-section h1{
+		font-size:1.5em ;
+	}
+	.projets-section .projets .projet{
+		margin-right: 0;
+		margin-bottom: 20px ;
+		max-width: 100%;
+	}
+	footer{
+		justify-content: flex-start;
+	}
+	footer .colonne{
+		width: 80% ;
+	}
+
+}

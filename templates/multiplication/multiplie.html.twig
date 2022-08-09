@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+
+    {% block contenu %}
+        <div style="text-align: center">
+            <br><br> <br>
+            <h1>Table de {{nombre }} </h1>
+            <br><br>
+
+        </div><br>
+
+        <div style="width: 750px; padding-left: 580px">
+            {% for i in range(low=0, high=10, step=1) %}
+                <h3>  {{ i }} x {{ nombre }} =  {{ i* nombre }}</h3><br>
+            {% endfor %}
+        </div>
+
+    {% endblock %}

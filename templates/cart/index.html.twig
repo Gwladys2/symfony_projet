@@ -1,0 +1,71 @@
+{% extends 'boutique/index.html.twig' %}
+
+{% block title%} Mon panier - La boutique de Gwladys {% endblock %}
+
+{% block contenu %}
+<h1>Mon panier</h1>
+    <br><br>
+
+    Retrouvez içi l'ensembble des produits que vous avez ajoouté à votre panier.
+
+    <br><br>
+    {% if cart|length>0 %}
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th scope="col">Produits</th>
+            <th scope="col"></th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% set total=null %}
+        {% for product in cart %}
+        <tr>
+
+            <th><img src="/uploads/{{ product.product.illustration }}" height="75px"></th>
+
+            <td style="font-weight: bold"> {{ product.product.name }}</td>
+
+            <td>
+               <a href="{{ path ('add_to_cart', {'id':product.product.id}) }}">
+                <img src="{{ asset('assets/images/add.png') }}" height="18px" ALT="ajouter une quantité">
+                </a>
+
+                {{ product.quantity }}
+
+                <a href="{{ path ('decrease_to_cart', {'id':product.product.id}) }}">
+                <img src="{{ asset('assets/images/moins.png') }}" height="18px" ALT="supprimer une quantité">
+                </a>
+            </td>
+
+            <td>{{ (product.product.price/100)|number_format(2) }} €</td>
+
+            <td>{{ ((product.product.price*product.quantity)/100)|number_format(2) }} €</td>
+            <td>
+                <a href="{{ path('delete_to_cart',{ 'id':product.product.id}) }}">
+                <img src="{{ asset('assets/images/trash.png') }}" height="18px" ALT="supprimer mon produit">
+            </td>
+                </a>
+        </tr>
+            {% set total=total + (product.product.price*product.quantity) %}
+        {% endfor  %}
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <br>
+        <p style="font-weight: bold; font-size: 25px"> Nombre de produits: </b>{{ cart|length }}</p><br>
+        <p STYLE="font-weight: bold; font-size: 25px">Total de mon panier: </b>{{(total /100)|number_format(2) }} €</p><br><br>
+        <a href="{{ path('app_commande') }}" class="btn btn-success btn-block">Valider mon panier</a>
+    </div>
+    {% else %}
+        <hr>
+        <p><b>Votre panier est vide</b></p>
+    {% endif %}
+
+{% endblock %}

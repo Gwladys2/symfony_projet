@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+   <section class="page-content">
+      <header>
+         <h1>Hey, je suis développeuse web full stack.</h1>
+         <p>
+            "Bienvenue, je m'appelle Gwladys j'ai 44 ans et je suis passionnée d'informatique depuis plus de 20 ans.
+            Vous découvrirez dans ce porfolio mon parcours, mes formations et mes projets réalisés. N'hésitez pas à me contacter
+            si vous avez besoin d'informations compémentaires."
+
+         </p>
+
+      </header>
+   </section>
+
+   <section class="presentation-image">
+      <img src="/assets/images/main-image.jpg" alt="Developpeuse-web">
+   </section>
+
+   <section class="projets-section" style="margin: 20px; padding-left: 100px">
+      <h1>Projets réalisés</h1><br>
+      <div class="projets">
+
+         <div class="projet">
+            <a href="{{ path('app_quizz') }}" style="text-decoration: none; color: black" >
+               <p class="description"><img src="/assets/images/quizz.jpg" style="width:400px; height:400px"></p></a>
+         </div>
+         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+
+         <div style="padding-left: 250px">
+            <a href="{{ path('app_boutique') }}" style="text-decoration: none; color: black" >
+               <img src="/assets/images/boutique.jpg" style="width:500px; height:400px"></a>
+         </div>
+
+         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+         <div class="projet" style="text-align: center; padding-top: 80px">
+            <a href="{{ path('app_calculatrice') }}" style="text-decoration: none; color: black" >
+            <p class="description"><img src="/assets/images/calculatrice.jpg" style="width:400px; height:300px"></p></a>
+         </div>
+
+
+
+      <div class="projet"  style="text-align: center; padding-top: 80px; padding-left: 400px">
+         <a href="{{ path('app_imc') }}" style="text-decoration: none; color: black" >
+            <p class="description"><img src="/assets/images/imc2.jpg" style="width:400px; height:300px"></p></a>
+      </div>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+
+      </div>
+      </div>
+<br>
+      <div>
+         <p><a href="{{ path('app_my_realisations') }}" style="text-decoration: none; color: black"><b>afficher la suite des réalisations</b></a></p>
+      </div>
+   </section>
+
+
+{% endblock %}

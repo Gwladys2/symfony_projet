@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+    <section class="page-content">
+        <header>
+            <h1>Mes réalisations</h1><br>
+            <p>
+               Vous découvrirez içi des projets que j'ai réalisé avec des langages de programmations telsque
+                PHP, JAVASCRIPT, HTML, CSS, la base de donnée MYSQL, Bootstrap, le CMS WORDPRESS, des projets avec le Framework Symfony 5.4.1.
+            </p>
+
+        </header>
+    </section>
+
+
+
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Quizz développé avec JavaScript</th>
+            <th scope="col">Boutique en ligne développé avec Symfony 5</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td> <a href="{{ path('app_quizz') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/quizz.jpg" style="width:400px; height:400px"></a>
+            </td>
+            <td><a href="{{ path('app_boutique') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/boutique.jpg" style="width:500px; height:400px"></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Calculateur IMC développé avec SYMFONY 5</th>
+            <th scope="col">Table de multiplication développé avec SYMFONY 5</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td> <a href="{{ path('app_imc') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/imc.jpg" style="width:450px; height:400px"></a>
+            </td>
+            <td><a href="{{ path('app_multiplication') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/multiplication2.jpg" style="width:550px; height:400px"></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Calculatrice</th>
+            <th scope="col">Boutique en ligne réalisé avec WORDPRESS</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td> <a href="{{ path('app_calculatrice') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/calculatrice.jpg" style="width:500px; height:400px"></a>
+            </td>
+            <td><a href="http://epicerienaturelle.com/" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/epicerie.jpg" style="width:550px; height:400px"></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Espace membre réalisé avec PHP, MYSQ, HTML,CSS et BOOTSTRAP</th>
+            <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td> <a href="http://www.g-webdc.com/membres/index.php" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/espacemembre.jpg" style="width:550px; height:500px"></a>
+            </td>
+            <td><a href="" style="text-decoration: none; color: black" >
+
+
+
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

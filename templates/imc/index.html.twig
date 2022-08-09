@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+
+    {% block contenu %}
+        <div style="text-align: center">
+        <br><br> <br>
+        <h1>Calcul IMC REALISE AVEC SYMFONY 5</h1>
+        <br><br>
+        <p>Vous allez pouvoir calculer votre IMC. Veuillez entrer votre poids en kg et votre taille en cm</p>
+        </div><br>
+        <div style="width: 800px; padding-left: 500px">
+
+        {{ form(form1) }}
+
+        </div>
+
+    {% endblock %}
+
+

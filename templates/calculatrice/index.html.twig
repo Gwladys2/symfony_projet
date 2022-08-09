@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{%  block contenu%}
+    <head>
+        <title>Simple Calculatrice</title>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style3.css">
+
+
+
+    </head>
+    <body>
+
+
+    <h1 style="text-align: center">Calculatrice réalisée avec du HTML et CSS</h1>
+
+    <table>
+        <tr>
+        <tr>
+            <td class ="entete">
+                Simple Calculatrice
+            </td>
+        </tr>
+        <td style="padding-left: 20px">
+            <form name="calc" class="calculatrice">
+                <input type="text" class="value" name="txt" readonly="" style="width:250px; height:50px; border-radius:5px">
+
+        </td>
+        </tr>
+
+        <!-- partie des boutons de la calculatrice -->
+
+        <tr>
+
+            <td style="padding-left: 20px">
+                <input type="button" value="CE" onclick="document.calc.txt.value =''">
+
+                <input type="button" value="x"  name="button" onclick="document.calc.txt.value +='*'">
+                <input type="button" value="/" onclick="document.calc.txt.value +='/'">
+                <br>
+                <input type="button" value="1" name="button" onclick="document.calc.txt.value +='1'">
+                <input type="button" value="2" onclick="document.calc.txt.value +='2'">
+                <input type="button" value="3" onclick="document.calc.txt.value +='3'">
+                <input type="button" value="+" onclick="document.calc.txt.value +='+'">
+                <br>
+                <input type="button" value="4" onclick="document.calc.txt.value +='4'">
+                <input type="button" value="5" onclick= "document.calc.txt.value +='5'" >
+                <input type="button" value="6" onclick="document.calc.txt.value +='6'" >
+                <input type="button" value="-" onclick= "document.calc.txt.value +='-'" >
+                <br>
+                <input type="button" value="7" name="button" onclick="document.calc.txt.value +='7'">
+                <input type="button" value="8" onclick="document.calc.txt.value +='8'" >
+                <input type="button" value="9" onclick= "document.calc.txt.value +='9'" >
+                <input type="button" value="0" onclick= "document.calc.txt.value +='0'">
+                <br>
+
+
+                <input type="button" value="=" onclick="document.calc.txt.value =eval(calc.txt.value)" style="width:120px; color:white; background:green;">
+                <br>
+
+            </td>
+
+
+        </tr>
+
+        </form>
+    </table>
+
+    </body>
+
+{% endblock  %}

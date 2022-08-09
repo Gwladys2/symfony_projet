@@ -1,0 +1,27 @@
+
+{% extends 'base.html.twig' %}
+
+    {% block contenu %}
+        <br><br> <br><br><br>
+
+
+
+        <div style="text-align: center">
+        <h2>
+
+
+        {% if resultat>18 and resultat<24%}
+        Votre IMC est de : {{resultat }}<br> Vous êtes bien comme ça, continuez ainsi!<br>
+
+         {% elseif resultat>24 %}
+             Votre IMC est de : {{resultat }}  <br>Vous êtes en surpoids, attention à vous!
+         {% elseif resultat<18 %}
+             Votre IMC est de : {{resultat }}  <br>Vous êtes trop maigre, faut manger plus!
+
+            {% endif %}
+
+
+        </h2>
+        </div><br><br><br><br><br><br>
+    {% endblock %}
+
