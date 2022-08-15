@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Générateur de vidéo youtube{% endblock %}
+
+{% block contenu %}
+    <br><br>
+    <h1>Générateur de vidéos Youtube</h1>
+    <br><br>
+
+    <h2>Toutes les vidéos</h2>
+
+    <div class="row row-col-1 row-cols-md-2 g-4">
+
+    {% for youtube in youtubes %}
+        <div class="col">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+
+     <a href="{{ path('app_video', {'id':youtube.id}) }}">   <img src="{{ youtube.url | youtube_thumbnail }}" class="card-img-top" alt="url youtube"></a>
+        <div class="card-body">
+              <h5 class="card-title">{{ youtube.name }}</h5>
+                     </div>
+                </div>
+            </div>
+
+    {% endfor %}
+    </div>
+
+    <div class="mb-5 mt-5" id="addvideo">
+        <h2>Ajouter une vidéo</h2>
+        <br><br>
+{{ form(form) }}
+
+    </div>
+
+
+{% endblock %}

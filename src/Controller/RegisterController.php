@@ -30,7 +30,7 @@ class RegisterController extends AbstractController
             $user=$form->getData();
             $this->entityManager->persist($user);
             $this->entityManager->flush();
-            return $this->render('affiche_inscription/index.html.twig');
+            return $this->render('affiche_message/index.html.twig');
         }
 
         return $this->render('register/index.html.twig', [

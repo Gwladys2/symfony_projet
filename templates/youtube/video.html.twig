@@ -1,0 +1,15 @@
+
+{% block contenu %}
+<div style="background-color: black; height: 30px">
+
+<a style="color: white; font-size: large" href="{{ path('app_youtube') }}">retour </a>
+</div>
+<br><br>
+<h1>Générateur de vidéos Youtube</h1>
+<br><br>
+
+    <h2>{{ name }}</h2>
+
+    <div>{{ url|youtube_player| raw }}</div>
+
+{% endblock %}

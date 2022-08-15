@@ -46,18 +46,19 @@
         <tr>
             <th scope="col"></th>
             <th scope="col">Calculateur IMC développé avec SYMFONY 5</th>
-            <th scope="col">Table de multiplication développé avec SYMFONY 5</th>
+            <th scope="col">Générateur de vidéos Youtube </th>
 
         </tr>
         </thead>
+
         <tbody>
         <tr>
             <th scope="row"></th>
             <td> <a href="{{ path('app_imc') }}" style="text-decoration: none; color: black" >
                     <img src="/assets/images/imc.jpg" style="width:450px; height:400px"></a>
             </td>
-            <td><a href="{{ path('app_multiplication') }}" style="text-decoration: none; color: black" >
-                    <img src="/assets/images/multiplication2.jpg" style="width:550px; height:400px"></td>
+            <td><a href="{{ path('app_youtube') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/youtube.jpg" style="width:550px; height:400px"></a></td>
 
         </tr>
 
@@ -82,7 +83,7 @@
                     <img src="/assets/images/calculatrice.jpg" style="width:500px; height:400px"></a>
             </td>
             <td><a href="http://epicerienaturelle.com/" style="text-decoration: none; color: black" >
-                    <img src="/assets/images/epicerie.jpg" style="width:550px; height:400px"></td>
+                    <img src="/assets/images/epicerie.jpg" style="width:550px; height:400px"></a></td>
 
         </tr>
 
@@ -96,19 +97,21 @@
         <tr>
             <th scope="col"></th>
             <th scope="col">Espace membre réalisé avec PHP, MYSQ, HTML,CSS et BOOTSTRAP</th>
-            <th scope="col"></th>
+            <th scope="col">Table de multiplication réalisée avec SYMFONY 5</th>
 
         </tr>
         </thead>
+
         <tbody>
         <tr>
             <th scope="row"></th>
             <td> <a href="http://www.g-webdc.com/membres/index.php" style="text-decoration: none; color: black" >
                     <img src="/assets/images/espacemembre.jpg" style="width:550px; height:500px"></a>
             </td>
-            <td><a href="" style="text-decoration: none; color: black" >
+            <td><a href="{{ path('app_multiplication') }}" style="text-decoration: none; color: black" >
+                    <img src="/assets/images/multiplication2.jpg" style="width:550px; height:400px"> </a></td>
 
-
+        </tr>
 
 
         </tbody>
