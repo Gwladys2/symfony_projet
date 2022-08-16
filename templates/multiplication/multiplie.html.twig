@@ -9,11 +9,11 @@
             <br><br>
 
         </div><br>
-
+        <div style="border:1px solid black; border-radius:10px; text-align:center"><br>
         <div style="width: 750px; padding-left: 580px">
             {% for i in range(low=0, high=10, step=1) %}
                 <h3>  {{ i }} x {{ nombre }} =  {{ i* nombre }}</h3><br>
             {% endfor %}
         </div>
-
+        </div>
     {% endblock %}
