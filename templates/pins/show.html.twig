@@ -1,0 +1,17 @@
+
+{% block contenu %}
+
+<div style="background-color: black; height: 100px; padding-top: 30px; padding-left: 1200px; border-radius: 5px">
+<a href="{{path('app_pins')  }}" style="color: white">Retour</a>
+</div>
+
+    <article>
+            <h1>{{ pin.title }}</h1>
+            <p>{{ pin.description }}</p>
+        </article>
+
+{% endblock %}
+
+
+
+
