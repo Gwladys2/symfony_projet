@@ -1,13 +1,20 @@
-{% extends 'boutique/index.html.twig' %}
+{% extends 'contact_me/index.html.twig' %}
 
 {% block title %}La boutique{% endblock %}
 
 {% block contenu %}
    <br><br>
+
+
+
+    <div class ="txtes" style="text-align: center">
+
+
 <form method="post">
     {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div><br>
     {% endif %}
+
 
     {% if app.user %}
         <div class="mb-3">
@@ -15,31 +22,31 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>
-    <div style="width: 700px">
-    <label for="inputEmail">Votre Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Votre Mot de Passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <h1 class="txt" style="text-align: center">Merci de vous connecter</h1><br>
+
+
+    <div class="card">
+        <div class="card-body">
+    Votre Email<br><br>
+    <input class="form" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus><br><br>
+    Votre mot de Passe<br><br>
+    <input class="form" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}">
-    </div>
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
+
 <br><br>
-    <button class="btn btn-lg btn-primary btn-sm" type="submit">
+    <button class="txt" style="text-align: center; color: white; background-color: black; border-radius: 5px" class="btn btn-lg btn-primary btn-sm" type="submit">
         Se connecter
     </button><br><br>
-    <a href="{{ path('app_inscription_boutique')  }}">ou créez un compte</a>
+    <a style="text-align: center" href="{{ path('app_inscription_boutique')  }}">ou créez un compte</a>
 </form>
+
+    </div>
+    </div>
+</div>
+
 
 {% endblock %}
