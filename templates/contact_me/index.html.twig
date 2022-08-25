@@ -23,11 +23,14 @@
         <input type="checkbox" id="toggle">
 
 <div class="txtes" style="text-align: center; height: 150px; padding-top: 20px">
-        <a  href="{{ path('app_cart') }}">Mon panier
+
+    <a style="color: white" href="{{ path('app_boutique') }}" >&nbsp; &nbsp;&nbsp;   Accueil  &nbsp; &nbsp;&nbsp;</a>
+
+        <a style="color: white" href="{{ path('app_cart') }}">Mon panier
             <img  src="{{asset('assets/images/trolley.png')}}" height="50px" alt="Mon panier">
         </a>
 
-                    <a href="{{ path('app_products') }}" >&nbsp; &nbsp;&nbsp;  Nos produits&nbsp; &nbsp;&nbsp;</a>
+                    <a style="color: white" href="{{ path('app_products') }}" >&nbsp; &nbsp;&nbsp;  Nos produits&nbsp; &nbsp;&nbsp;</a>
 
 
 
@@ -35,10 +38,10 @@
 
             {% if app.user %}
 
-            <a href="{{ path('app_compte') }}" >Mon Compte ( {{ app.user.firstname}} ) | <a href="{{ path('app_logout') }}">Déconnexion</a>
+            <a style="color: white" href="{{ path('app_compte') }}" >Mon Compte ( {{ app.user.firstname}} ) | <a href="{{ path('app_logout') }}">Déconnexion</a>
                 {% else %}
 
-                <a href="{{ path('app_login')}}">Connexion |  <a href="{{ path('app_inscription_boutique') }}"> Inscription</a>
+                <a style="color: white" href="{{ path('app_login')}}">Connexion |  <a style="color: white" href="{{ path('app_inscription_boutique') }}"> Inscription</a>
 
 
                     {% endif %}

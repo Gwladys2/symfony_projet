@@ -34,15 +34,7 @@ nav a:hover
     color: whitesmoke;
 }
 
-label
-{
-    display: none;
-}
 
-label, #toggle
-{
-    display: none;
-}
 
 
 @media all and (max-width: 991px)
@@ -109,13 +101,13 @@ label, #toggle
 
     label
     {
-        width: 30px;
+
         display: flex;
-        justify-content: center;
-        align-items: center;
+
+
         margin: 0 auto;
-        font-size: 40px;
-        color: white;
+
+
         cursor: pointer;
     }
 
