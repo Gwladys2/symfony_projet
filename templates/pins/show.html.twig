@@ -1,3 +1,5 @@
+{% extends 'pins/index.html.twig' %}
+
 
 {% block contenu %}
 
@@ -10,7 +12,8 @@
             <p>{{ pin.description }}</p>
         </article>
 
-    <a href="{{ path('app_pins_edit', {id:pin.id}) }}">Edit</a>
+    <a href="{{ path('app_pins_edit', {id:pin.id}) }}">Modifier</a>
+    <a href="{{ path('app_pins_delete', {id:pin.id}) }}" >Supprimer</a>
     <a href="{{ path('app_pins') }}">Retour</a>
 
 {% endblock %}
