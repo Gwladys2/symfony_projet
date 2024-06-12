@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd2f762d0cdb5406fb718e108ca42d45",
+    "content-hash": "c9612cf0a9eab1cf900a4280c46123b4",
     "packages": [
         {
             "name": "copadia/php-video-url-parser",
@@ -10699,7 +10699,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.5",
+        "php": ">=8.2.0",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
